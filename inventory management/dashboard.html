@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        
+        <div class="user-info">
+            
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        </div>
+        <ul>
+            <li><i class="fas fa-home"></i> Dashboard</li>
+            <li><i class="fas fa-box"></i> Products</li>
+            <li><i class="fas fa-truck"></i> Suppliers</li>
+            <li><i class="fas fa-chart-line"></i> Sales</li>
+            <li><i class="fas fa-file-invoice"></i> Invoices</li>
+            <li><i class="fas fa-cogs"></i> Settings</li>
+            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="header">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+            <h1>Dashboard</h1>
+        </div>
+        <div class="main">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <i class="fas fa-box"></i>
+                    <h3>Products</h3>
+                    <p>Manage inventory items and stock levels.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Suppliers</h3>
+                    <p>Track suppliers and their contact information.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Sales</h3>
+                    <p>Monitor sales performance and trends.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Invoices</h3>
+                    <p>View and manage invoices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('hidden');
+            content.classList.toggle('full-width');
+        }
+    </script>
+</body>
+</html>
